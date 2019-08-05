@@ -1,0 +1,159 @@
+:global {
+    $primary-font: "Roboto", "Open Sans", sans-serif;
+    $secondary-font: "Roboto Slab", "Raleway", "Open Sans", serif;
+    // Color Variables
+    $accent-color: #009ad8;
+    $primary-color: $accent-color;
+    $secondary-color: #262936;
+    $bg-color: #1e202b;
+    $strong-color: #fff;
+    $body-color: #bfc1c8;
+    // Grid system
+    $grid-columns: 12 !default;
+    $grid-gutter-width: 30px !default;
+    $browser-context: 14; // Default
+
+    @mixin clearfix {
+        *zoom: 1;
+
+        &:after {
+            content: " ";
+            clear: both;
+            display: block;
+            overflow: hidden;
+            height: 0;
+        }
+    }
+
+    @mixin size($width, $height:$width) {
+        width: $width;
+        height: $height;
+    }
+
+    @mixin cover() {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+
+    @mixin auto_center($width, $height:$width) {
+        @include cover();
+        margin: auto;
+    }
+
+    // Converting PX value to EM based on browser-context variable
+    // Usage: @include em(16)
+    @mixin em($pixels, $context: $browser-context) {
+        font-size: #{$pixels}px;
+        font-size: #{$pixels/$context}em;
+    }
+
+    @mixin rem($pixels, $context: $browser-context) {
+        font-size: #{$pixels}px;
+        font-size: #{$pixels/$context}rem;
+    }
+
+    @import 'layout/header';
+    @import 'layout/content';
+    @import 'layout/sidebar';
+    @import 'layout/footer';
+    $browser-context: 14; // Default
+
+    html {
+        font-size: #{$browser-context}px;
+    }
+
+    body {
+        color: $body-color;
+        font-family: $primary-font;
+        font-size: #{$browser-context}px;
+        font-weight: 300;
+        line-height: 1.5;
+        background: $bg-color;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: 700;
+        margin: 0 0 20px;
+        line-height: normal;
+    }
+
+
+    .find-location {
+        height: 370x;
+        width: 100%;
+        border-radius: 20px;
+        overflow: hidden;
+
+        .leaflet-container {
+
+            height: 380px;
+            width: 100%;
+        }
+    }
+
+    .preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: #262936;
+        z-index: 500;
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100vw;
+
+        .logo {
+            width: 70px;
+            height: 70px;
+            animation: rotating 3s linear infinite;
+        }
+
+        @keyframes rotating {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            60% {
+                transform: rotate(720deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+    }
+
+    .pagination {
+        .page-link {
+
+            background-color: #262936;
+
+            a {
+                color: #ffff;
+            }
+        }
+
+        .active {
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .disabled {
+            display: none;
+        }
+    }
+}

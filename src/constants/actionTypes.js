@@ -1,0 +1,6 @@
+export const APP_LOAD = 'APP_LOAD';
+export const REDIRECT = 'REDIRECT';
+export const LOAD_WEATHER = 'LOAD_WEATHER';
+export const LOAD_PHOTOS = 'LOAD_PHOTOS';
+export const LOAD_WEATHER_STATS = 'LOAD_WEATHER_STATS';
+export const LOAD_WEATHER_HISTORY = 'LOAD_WEATHER_HISTORY';

@@ -1,0 +1,43 @@
+.panelFormWrapper{
+    fieldset{
+        margin-bottom:15px;
+
+        legend{
+            color:$color-purple;
+            font-size:16px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            
+            &.legendUppercase{
+                text-transform: uppercase;
+            }
+        }
+        
+    }
+
+    .form-group{
+        margin-bottom:15px;
+    }
+
+    .errorWrapper{
+        width:100%;
+
+        span{
+            background:$color-red;
+            color:#fff;
+            font-size:12px;
+            padding:5px;
+            display: block;
+            width: 100%;
+        }
+    }
+
+    .submitWrapper{
+        text-align: right;
+        margin:30px -10px 0;
+        
+        .btn{
+            margin:0 10px;
+        }
+    }
+}

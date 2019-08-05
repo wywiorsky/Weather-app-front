@@ -1,0 +1,102 @@
+button, button:focus {
+    outline: none;
+}
+
+.btn {
+    border:none;
+    outline:none;
+    box-shadow:none;
+    background-color: transparent;
+    padding: 12px 45px;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    line-height: 1em;
+    font-weight: 500;
+
+    &.btn-white {
+        color: $color-purple;
+        background-color: white;
+        border:1px solid $color-purple;
+
+        &:hover {
+            color: white;
+            background-color: $color-purple;
+            border:1px solid white;
+        }
+    }
+    &.btn-primary {
+        color: white;
+        background-color: $color-blue;
+        border:1px solid $color-blue;
+        
+        &:hover {
+            color: $color-blue;
+            background-color: white;
+            border:1px solid $color-blue;
+        }
+    }
+
+    &.btn-green {
+        color: white;
+        background-color: $color-green;
+        border:1px solid $color-green;
+        
+        &:hover {
+            color:$color-green;
+            background-color: white;
+            border:1px solid $color-green;
+        }
+    }
+
+    &.btn-grey {
+        color: white;
+        background-color: $color-grey;
+        border:1px solid $color-grey;
+
+        &:hover {
+            color: $color-grey;
+            background-color: white;
+            border:1px solid $color-grey;
+        }
+    }
+
+    &.btn-purple {
+        color: white;
+        background-color: $color-purple;
+        border:1px solid $color-purple;
+
+        &:hover {
+            color: $color-purple;
+            background-color: white;
+            border:1px solid $color-purple;
+        }
+    }
+
+    &.btn-transparent {
+        color: white;
+        background-color: transparent;
+        border:1px solid #ffffff;
+
+        &:hover {
+            color: #000000;
+            background-color: white;
+            border:1px solid #ffffff;
+        }
+    }
+
+    &.btn-transparent-dark {
+        color: #000000;
+        background-color: transparent;
+        border:1px solid #000000;
+
+        &:hover {
+            color: #ffffff;
+            background-color: #000000;
+            border:1px solid #000000;
+        }
+    }
+
+    &.btn-block{
+        width:100%;
+    }
+}
